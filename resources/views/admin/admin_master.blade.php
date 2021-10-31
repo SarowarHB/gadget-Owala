@@ -29,7 +29,7 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>Starlight Responsive Bootstrap 4 Admin Template</title>
+    <title>Gadget Owala</title>
 
     <!-- vendor css -->
     <link href="{{asset('backend/assets/lib/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
@@ -44,7 +44,7 @@
 <body>
 
     <!-- ########## START: LEFT PANEL ########## -->
-    <div class="sl-logo"><a href=""><i class="icon ion-android-star-outline"></i> starlight</a></div>
+    <div class="sl-logo"><a href=""><i class="icon ion-android-star-outline"></i>Gadget Owala</a></div>
    
     @include('admin.body.sidebar')
     <!-- ########## END: LEFT PANEL ########## -->
