@@ -15,47 +15,57 @@
                             href="mailto:fastsales@gmail.com">fastsales@gmail.com</a>
                     </div>
                     <div class="top_bar_content ml-auto">
-                        <div class="top_bar_menu">
-                            <ul class="standard_dropdown top_bar_dropdown">
-                                <li>
-                                    <a href="#">English<i class="fas fa-chevron-down"></i></a>
-                                    <ul>
-                                        <li><a href="#">Italian</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                        <li><a href="#">Japanese</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-                                    <ul>
-                                        <li><a href="#">EUR Euro</a></li>
-                                        <li><a href="#">GBP British Pound</a></li>
-                                        <li><a href="#">JPY Japanese Yen</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                       
                         <div class="top_bar_user">
+
                             <div class="user_icon"><img src="{{asset('frontend/images/user.svg')}}" alt=""></div>
-                            <div><a href="#">Register</a></div>
-                            
+
+
+
+
                             @if (Route::has('login'))
                             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                 @auth
-                                <a href="{{ url('/dashboard') }}"
-                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                                <div class="top_bar_menu">
+                                    <ul class="standard_dropdown top_bar_dropdown">
+                                        <li>
+                                            <a href="#">{{ Auth::user()->name }}<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li><a href="{{ route('profile.show') }}"
+                                                        :active="request()->routeIs('profile.show')">Profile</a>
+                                                </li>
+                                                @if(Auth::user()->role == 'admin')
+                                                <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                                                @endif
+                                                <li>
+                                                    <form method="POST" action="{{ route('logout') }}">
+                                                        @csrf
+                                                        <a href="{{ route('logout') }}"
+                                                            onclick="event.preventDefault();this.closest('form').submit();">
+                                                    </form>
+                                                    <i class="icon ion-power"></i> Log Out</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
                                 @else
+
                                 <a href="{{ route('login') }}"
-                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
+
 
                                 @if (Route::has('register'))
-                                <a href="{{ route('register') }}"
-                                    class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                <div><a href="{{ route('user.register') }}">Register</a></div>
+
                                 @endif
                                 @endauth
                             </div>
                             @endif
-                            <div><a href="{{ route('login') }}">Sign in</a></div>
+
                         </div>
                     </div>
                 </div>
@@ -72,7 +82,7 @@
                 <!-- Logo -->
                 <div class="col-lg-2 col-sm-3 col-3 order-1">
                     <div class="logo_container">
-                        <div class="logo"><a href="#">OneTech</a></div>
+                        <div class="logo"><a href="#">GadgetOwala</a></div>
                     </div>
                 </div>
 
@@ -80,7 +90,7 @@
                 <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
                     <div class="header_search">
                         <div class="header_search_content">
-                            <div class="header_search_form_container">
+                            <div class="header_search_form_container" style="margin-left:60px;">
                                 <form action="#" class="header_search_form clearfix">
                                     <input type="search" required="required" class="header_search_input"
                                         placeholder="Search for products...">
@@ -99,7 +109,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="header_search_button trans_300" value="Submit"><img
-                                            src="images/search.png" alt=""></button>
+                                            src="{{asset('frontend/images/search.png')}}" alt=""></button>
                                 </form>
                             </div>
                         </div>
