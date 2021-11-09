@@ -67,8 +67,11 @@
           @yield('content')
 
         </div><!-- sl-pagebody -->
-        @include('admin.body.footer')
+
+      
+       
     </div><!-- sl-mainpanel -->
+
     <!-- ########## END: MAIN PANEL ########## -->
 
     <script src="{{asset('backend/assets/lib/jquery/jquery.js')}}"></script>

@@ -4,15 +4,16 @@
 
 				<div class="col-lg-3 footer_col">
 					<div class="footer_column footer_contact">
-						<div class="logo_container">
-							<div class="logo"><a href="#">OneTech</a></div>
+					<div class="logo_container">
+							<div class="logo"><a href="#">GadgetOwala</a></div>
 						</div>
 						<div class="footer_title">Got Question? Call Us 24/7</div>
-						<div class="footer_phone">+38 068 005 3570</div>
+						<div class="footer_phone">+8801990475856</div>
 						<div class="footer_contact_text">
-							<p>17 Princess Road, London</p>
-							<p>Grester London NW18JR, UK</p>
+							<p>255, Free School Street</p>
+							<p>Dhanmonddi, Dhaka, Bangladesh</p>
 						</div>
+						
 						<div class="footer_social">
 							<ul>
 								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -87,10 +88,10 @@
                                 Copyright &copy;<script>
                                     document.write(new Date().getFullYear());
 
-                                </script> All rights reserved | This template is made with <i class="fa fa-heart"
+                                </script> All rights reserved  <i class="fa fa-heart"
                                     aria-hidden="true">
 
-                                </i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                </i> by <a href="" target="_blank">GadgetOwala</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </div>
                             <div class="logos ml-sm-auto">

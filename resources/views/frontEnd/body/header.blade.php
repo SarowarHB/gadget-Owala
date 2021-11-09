@@ -7,24 +7,25 @@
             <div class="row">
                 <div class="col d-flex flex-row">
                     <div class="top_bar_contact_item">
-                        <div class="top_bar_icon"><img src="{{asset('frontend/images/phone.png')}}" alt=""></div>+38 068
-                        005 3570
+                        <div class="top_bar_icon"><img src="{{asset('frontend/images/phone.png')}}" alt=""></div>
+                        +8801990475856
                     </div>
                     <div class="top_bar_contact_item">
                         <div class="top_bar_icon"><img src="{{asset('frontend/images/mail.png')}}" alt=""></div><a
-                            href="mailto:fastsales@gmail.com">fastsales@gmail.com</a>
+                            href="mailto:GadgetOwala@gmail.com">GadgetOwala@gmail.com</a>
                     </div>
-                    <div class="top_bar_content ml-auto">
-                       
-                        <div class="top_bar_user">
 
+                    <div class="top_bar_content ml-auto">
+                        <div class="top_bar_menu">
+                            <ul class="standard_dropdown top_bar_dropdown">
+                                
+                            </ul>
+                        </div>
+                        <div class="top_bar_user">
                             <div class="user_icon"><img src="{{asset('frontend/images/user.svg')}}" alt=""></div>
 
-
-
-
-                            @if (Route::has('login'))
-                            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+							@if (Route::has('login'))
+                            <div>
                                 @auth
                                 <div class="top_bar_menu">
                                     <ul class="standard_dropdown top_bar_dropdown">
@@ -54,8 +55,7 @@
 
                                 @else
 
-                                <a href="{{ route('login') }}"
-                                    class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
+                                <div style="padding: 5px;"><a href="{{ route('login') }}">Login</a></div>
 
 
                                 @if (Route::has('register'))
@@ -65,9 +65,9 @@
                                 @endauth
                             </div>
                             @endif
-
+							
                         </div>
-                    </div>
+                    </div>      
                 </div>
             </div>
         </div>

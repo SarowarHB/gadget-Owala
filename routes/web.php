@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('frontEnd.body.index');
+    return view('admin.index');
 })->name('dashboard');
 
 Route::get('/user/register',[UserController::class,'UserRegistration'])->name('user.register');
