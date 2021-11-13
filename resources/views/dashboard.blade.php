@@ -1,4 +1,5 @@
 <x-app-layout>
+@if(Auth::user()->role=='admin')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -12,4 +13,7 @@
             </div>
         </div>
     </div>
+
+    
+    @endif
 </x-app-layout>
